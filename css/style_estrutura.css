@@ -18,7 +18,9 @@
 #geral{
     margin: 20px;
     padding: 20px;
-    display: flex;
+    display: flex; /*Tirar para testar o que acootece*/
+    flex-direction: column;
+    justify-content: center;
 }
 
 #cabecalho{
