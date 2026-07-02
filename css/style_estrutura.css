@@ -1,66 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: roboto;
 }
 
-:root{
+:root {
     --cor_principal: #912d2d;
     --cor_botao_01: #ffe4cb;
     --cor_lnk_menu: #642929;
     --cor_rosa: #ff1b60;
+    --cor_suave: #f3deb6;
 }
 
-#geral{
+#geral {
     margin: 20px;
     padding: 20px;
-    display: flex; /*Tirar para testar o que acootece*/
-    flex-direction: column;
-    justify-content: center;
-}
-
-#cabecalho{
-    width: 100%;
-    height: 200px;
-    background-color: var(--cor_principal);
-    padding: 5px;
     display: flex;
+    /*Tirar para testar o que acootece*/
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#logo img{
+
+#cabecalho {
+    width: 100%;
+    height: 200px;
+    background-color: var(--cor_principal);
+    padding: 5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
     width: 250px;
     height: 160px;
 }
 
-#menu{
+#menu {
     background-color: aliceblue;
     width: 600px;
-    height: 160px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 /*CONFIGURANDO OS LI DO UL DO
  CABEÇALHO NA HORIZONTAL*/
 #cabecalho ul {
     display: flex;
     list-style: none;
-    gap: 50px;
+    gap: 20px;
 }
 
 /*CONFIGURANDO OS TAMANHOS DOS ÍCONES*/
-#div-icones img{
-    width: 80px;
-    height: 80px;
+#div-icones img {
+    width: 70px;
+    height: 60px;
 }
 
 /*FORMATANDO OS MENUS*/
-#menu a:link{
+#menu a:link {
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
@@ -68,7 +73,7 @@
 
 }
 
-#menu a:visited{
+#menu a:visited {
     font-size: 1.3em;
     text-transform: uppercase;
     text-decoration: none;
@@ -76,37 +81,120 @@
 
 }
 
-#menu a:hover{
+#menu a:hover {
     font-size: 1.3em;
-    text-transform: uppercase ;
+    text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_botao_01);
 }
 
-#menu a:active{
+
+#menu a:active {
     font-size: 1.3em;
-    text-transform: uppercase ;
+    text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_rosa);
 }
 
-#pesquisa{
-    background-color: pink;
+#pesquisa {
+    background-color: var(--cor_suave);
     width: 1000px;
     height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
-#pesquisa input{
-    width: 600px;
+#pesquisa input {
+    width: 500px;
     height: 80px;
     padding: 20px;
     border-radius: 8px;
     font-size: 2em;
+    background-color: var(--cor_lnk_menu);
 }
 
+#cards {
+    width: 1000px;
+    min-height: 600px;
+    margin: 20px 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 
+}
+
+.card {
+    width: 250px;
+    min-height: 250px;
+    border: solid 1px var(--cor_principal);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card:hover {
+    transform: translatey(-10px);
+}
+
+.car h2{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 10px 0px;
+
+}
+
+.car h3 {
+    margin: 20px 0px;
+
+}
+
+.card button {
+    width: 100%;
+    height: 45px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: none;
+    background-color: var(--cor_suave);
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+}
+#rodape{
+    width: 100% ; 
+    height: 300px;
+    background-color: var(--cor_suave);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+ }
+
+ #dadosloja{
+    font-size: 0.8em;
+ }
+
+ #icones-sociais ul{
+    list-style: none;
+
+ }
+
+ #icones-sociais img{
+    width: 25px;
+    height: 25px;
+    margin-left: 50px;
+ }
+
+ #div-cartoes img{
+    width: 25px;
+    height: 25px;
+ }
 

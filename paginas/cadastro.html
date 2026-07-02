@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Virtual</title>
     <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style_estrutura.css">
+    <link rel="stylesheet" href="../css/style_estrutura.css">
 </head>
 
 <body>
@@ -172,6 +172,30 @@
                 <button class="btn_card">Adiconar</button>
 
             </div>
+        </section>
+
+        <section id="formulario">
+            <h3>Cadastro</h3>
+
+            <form id="form-pessoa">
+                
+                <label for="nome">Seu nome</label>
+                <input type="text" name="nome" id="nome" class="input" required maxlength="60" placeholder="Digite seu nome">
+                
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="input01" required maxlength="60" placeholder="Digite seu nome">
+
+                <label for="sexo">Sexo</label>
+                <input type="radio" name="sexo" id="sexoM" class="inputOP" value="M"  > Masculino
+
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" class="input02" required maxlength="p" placeholder="Digite seu CEP">
+                
+                <div id="div-dados-endereco" class="oculto">
+
+                </div>
+           
+            </form>
         </section>
 
         <footer id="rodape">
