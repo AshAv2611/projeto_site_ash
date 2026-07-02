@@ -18,7 +18,7 @@
 #geral{
     margin: 20px;
     padding: 20px;
-
+    display: flex;
 }
 
 #cabecalho{
@@ -87,4 +87,24 @@
     text-decoration: none;
     color: var(--cor_rosa);
 }
+
+#pesquisa{
+    background-color: pink;
+    width: 1000px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#pesquisa input{
+    width: 600px;
+    height: 80px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 2em;
+}
+
+
 
