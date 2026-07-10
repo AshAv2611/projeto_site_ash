@@ -24,10 +24,9 @@
             <nav id="menu">
                 <ul>
 
-                    <li><a href="paginas/cadastro.html" class="link_menu"> Home</a></li>
+                    <li><a href="index.html" class="link_menu"> Home</a></li>
                     <li><a href="paginas/cadastro.html" class="link_menu"> Cadastro</a></li>
                     <li><a href="paginas/sobre.html" class="link_menu"> Sobre</a></li>
-
                 </ul>
             </nav>
 
@@ -40,6 +39,14 @@
                 </ul>
             </div>
         </header>
+
+        <nav id="nav-secoes">
+            <li><a href="#" class="lnk-secao">Todos </a></li>
+            <li><a href="#" class="lnk-secao"> Tranças</a></li>
+            <li><a href="#" class="lnk-secao">Rosa</a></li>
+            <li><a href="#" class="lnk-secao">Liso</a></li>
+            <li><a href="#" class="lnk-secao">Loira</a></li>
+        </nav>
 
         <section id="pesquisa">
             <input type="text" name="pesquisa" id="pesquisa" placeholder="Digite o seu produto">
@@ -179,20 +186,23 @@
 
         <footer id="rodape">
             <div id="dadosloja">
-                <h2>Rua sei la das quant</h2>
-                <h1>Aracajuvmdr,g bkt l</h1>
+                <h2>Rua sei la das quantas, 1001 - Centro</h2>
+                <h1>Aracaju - Sergipe</h1>
             </div>
 
             <div id="icones-sociais">
                 <ul>
                     <li><a href="https://www.instagram.com/"></a><img src="imagens/icones/instagram.png"
                             alt="ícone instagram"></li>
+                    <li><a href="imagens/icones/facebook.png">ícone facebook</a></li>
 
                 </ul>
             </div>
 
             <div id="div-cartoes">
                 <img src="imagens/icones/hipercard.png" alt="Hipercard">
+                <img src="imagens/icones/visa.png" alt="Visa">
+                <img src="imagens/icones/master_card.png" alt="Mastercard">
             </div>
 
         </footer>
@@ -200,3 +210,48 @@
 </body>
 
 </html>
+
+<section id="formulario">
+    <h3>Cadastro</h3>
+
+    <form id="form-pessoa">
+
+        <label for="cep">CEP</label>
+        <input type="text" name="cep" id="cep" class="input02" required maxlength="9"
+            placeholder="Digite Seu CEP">
+
+        <div id="div-dados-endereco" class="oculto">
+            <label for="logradouro">Logradouro</label>
+            <input type="text" name="logradouro" id="logradouro" class="input01">
+
+            <label for="num-residencia">Número</label>
+            <input type="text" name="logradouro" id="logradouro" class="input02" maxlength="10"
+                placeholder="Digite o número da residência" required>
+
+            <label for="complemento-end">Complemento</label>
+            <input type="text" name="complemento-end" id="complemento-end" class="input01">
+
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" class="input01">
+
+            <label for="localidade">localidade</label>
+            <input type="text" name="localidade" id="localidade" class="input01">
+
+            <label for="uf">UF</label>
+            <input type="text" name="uf" id="uf" class="input02">
+
+        </div>
+
+        <label for="senha"> Senha </label>
+        <input type="password" name="senha" id="senha" class="input02" required maxlength="6"
+            placeholder="Informea senha">
+
+        <div id="div-btns">
+            <button type="submit" id="btn-add"> Cadastrar </button>
+            <button type="reset"></button>
+        </div>
+
+        </div>
+
+    </form>
+</section>
