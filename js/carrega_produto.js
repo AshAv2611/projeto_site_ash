@@ -138,6 +138,7 @@ const montandoCards = (objProdutos) => {
         btnCard.innerHTML = 'Adicionar'
 
         btnCard.addEventListener('click', ()=>{
+            //REDIRECIONA PARA A OÁGINAS carrinho.html
             window.location.href = "/paginas/carrinho.html"
         })
 
