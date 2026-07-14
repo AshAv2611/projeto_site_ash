@@ -1,120 +1,132 @@
+/*IMPORTANDO A FONTE ROBOTO DO GOGOLE FONT*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-* {
+/*ATRIBUINDO EM TODOS OS ELEMENTOS*/
+*{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: roboto;
 }
 
-:root {
-    --cor_principal: #912d2d;
-    --cor_botao_01: #ffe4cb;
-    --cor_lnk_menu: #642929;
-    --cor_rosa: #ff1b60;
-    --cor_suave: #f3deb6;
+/*CRIANDO VARIÁVEIS*/
+:root{
+    --cor_principal: #eec71b;
+    --cor_botao01: #049d09;
+    --cor_lnk_menu: #020100;
+    --cor_vermelha: #b60000;
+    --cor_suave: #c0ecee;
+    --cor_branca: #ffffff;
 }
 
-#geral {
+/*CONFIGURANDO A TAG main*/
+#geral{
     margin: 20px;
     padding: 20px;
     display: flex;
-    /*Tirar para testar o que acootece*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#cabecalho {
+/*CONFIGUANDOO O CABEÇALHO DA PÁGINA*/
+#cabecalho{
     width: 100%;
     height: 200px;
-    background-color: var(--cor_principal);
+    background-color: var(--cor_suave);
     padding: 5px 100px;
+    margin: 20px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
 }
 
-#logo img {
-    width: 250px;
+/*ALTERANDO O TAMANHO DA IMAGEM DO LOGO*/
+#logo img{
+    width: 180px;
     height: 160px;
 }
 
-#menu {
-    width: 600px;
-    height: 200px;
+/*CONFIGURANDO A TAG nav POR MEIO DO SEU ID*/
+#menu{
+    width: 750px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/*CONFIGURANDO OS LI DO UL DO
- CABEÇALHO NA HORIZONTAL*/
-#cabecalho ul {
+/*CONFIGURANDO OS LI DO UL DO CABEÇALHO NA HORIZONTAL*/
+#cabecalho ul, #menu-secoes {
     display: flex;
     list-style: none;
-    gap: 20px;
-}
+    gap: 30px
+} 
 
-/*CONFIGURANDO OS TAMANHOS DOS ÍCONES*/
-#div-icones img {
+/*CONFIGURANDO OS TAMAHOS DOS ÍCONES*/
+#div-icones img{
     width: 70px;
     height: 60px;
 }
 
 /*FORMATANDO OS MENUS*/
-#menu a:link {
-    font-size: 1.3em;
+#menu a:link{
+    font-size: 2.3em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_lnk_menu);
-
 }
 
-#menu a:visited {
-    font-size: 1.3em;
+#menu a:visited{
+    font-size: 2.4em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_lnk_menu);
-
 }
 
-#menu a:hover {
-    font-size: 1.3em;
+#menu a:hover{
+    font-size: 2.4em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--cor_botao_01);
+    color: var(--cor_principal);
 }
 
-
-#menu a:active {
-    font-size: 1.3em;
+#menu a:active{
+    font-size: 2.4em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--cor_rosa);
+    color: var(--cor_vermelha);
 }
 
-#pesquisa {
-    background-color: var(--cor_suave);
-    width: 1000px;
+/*FORMATANDO section PELO ID PESQUISA */
+#pesquisa{
+    background-color: var(--cor_principal);
+    width: 100%;
     height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-#pesquisa input {
-    width: 500px;
+#pesquisa input{
+    width: 1000px;
     height: 80px;
     padding: 20px;
     border-radius: 8px;
     font-size: 2em;
-    background-color: var(--cor_lnk_menu);
+    background-color: var(--cor_branca);
+    border: none;
 }
 
-#cards {
+#pesquisa input::placeholder{
+    font-style: italic;
+    font-size: 1.4em;
+    color: var(--cor_vermelha);
+    text-align: center;
+}
+
+/*FORMATAÇÃO DOS CARDS*/
+#cards{
     width: 1000px;
     min-height: 600px;
     margin: 20px 0px;
@@ -122,38 +134,35 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-
+    cursor: pointer;
 }
 
-.card {
+.card{
     width: 250px;
     min-height: 250px;
-    border: solid 1px var(--cor_principal);
+    border: solid 2px var(--cor_principal);
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
-.card:hover {
-    transform: translatey(-10px);
+.card:hover{
+    transform: translateY(-5px);
 }
 
-.car h2{
+.card h2{
     text-transform: uppercase;
     letter-spacing: 5px;
     margin: 10px 0px;
-
 }
 
-.car h3 {
-    margin: 20px 0px;
-
+.card h3{
+    margin: 20px 0px;    
 }
 
-.card button {
+.card button{
     width: 100%;
     height: 45px;
     text-transform: uppercase;
@@ -163,37 +172,68 @@
     cursor: pointer;
 }
 
-.card img {
+.card img{
     width: 100%;
-    height: 250px;
+    height: 150px;
 }
+
+/*FORMATAÇÃO DO RODAPÉ*/
 #rodape{
-    width: 100% ; 
+    width: 100%;
     height: 300px;
     background-color: var(--cor_suave);
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content:space-around;
+}
 
- }
-
- #dadosloja{
+#dadosloja{
     font-size: 0.8em;
- }
+}
 
- #icones-sociais ul{
+#icones-sociais ul {
     list-style: none;
+}
 
- }
-
- #icones-sociais img{
+#icones-sociais img{
     width: 25px;
     height: 25px;
     margin-left: 50px;
- }
+}
 
- #div-cartoes img{
+#div-cartoes img{
     width: 25px;
     height: 25px;
- }
+}
 
+/*CONFIGURANDO O MENU SEÇÕES*/
+#nav-secoes{
+    width: 100%;
+    min-height: 80px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lnk-secao:link, .lnk-secao:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    color: var(--cor_vermelha);
+}
+
+.lnk-secao:hover {
+    font-size: 1.5em;
+    color: var(--cor_vermelha);
+}
+
+.lnk-secao:active {
+    color: var(--cor_principal);
+}
+
+.qualquer-nome{
+    
+}

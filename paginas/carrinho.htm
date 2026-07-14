@@ -1,75 +1,79 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@import url(style_estrutura_paginas.css);
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Virtual</title>
-    <link rel="shortcut icon" href="imagens/icones/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style_estrutura.css">
+#carrinho {
+    width: 1000px;
+    min-height: 750px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
 
-    <script src="js/carrega_produto.js" type="module" defer></script>
+#itens-carrinho {
+    width: 680px;
+    margin: 20px 10px;
+    min-height: 750px;
+}
 
-</head>
+.item {
+    width: 600px;
+    height: 100px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--cor_suave);
+}
 
-<body>
-    <main id="geral">
-        <header id="cabecalho">
-            <div id="logo">
-                <a href="../index.html">
-                    <img src="../imagens/icones/logo.certa.jpg" alt="logo">
-                </a>
-            </div>
+.img-item {
+    width: 60px;
+    height: 60px;
+}
 
-            <nav id="menu">
-                <ul>
+.input-item {
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    border-radius: 8px;
+}
 
-                    <li><a href="../index.html" class="link_menu"> Home</a></li>
-                    <li><a href="../paginas/cadastro.html" class="link_menu"> Cadastro</a></li>
-                    <li><a href="../paginas/sobre.html" class="link_menu"> Sobre</a></li>
-                </ul>
-            </nav>
+.img-remover {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
 
-            <div id="div-icones">
-                <ul>
-                    <li><a href="/paginas/login.html" class="link_icone"><img src="imagens/icones/login.png"
-                                alt="">Login</a></li>
-                    <li><a href="/paginas/carrinho.html" class="link_icone"><img src="imagens/icones/carrinho.png"
-                                alt="">Carrinho</a></li>
-                </ul>
-            </div>
-        </header>
-        <section class="item">
-            <img src="../imagens/blueOne.jpg" alt="azul">
+#valores-carrinho {
+    width: 550px;
+    min-height: 450px;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+}
 
-            <p class="descricao">Azul</p>
-            <p class="vlr-unitario">R$ 45,00</p>
-            <input type="number" name="quant01">
-        </section>
+#valores-carrinho h2 {
+    margin: 20px 0px;
+    text-align: center;
+}
 
-        <footer id="rodape">
-            <div id="dadosloja">
-                <h2>Rua sei la das quantas, 1001 - Centro</h2>
-                <h1>Aracaju - Sergipe</h1>
-            </div>
+.valor{
+    text-align: center;
+}
 
-            <div id="icones-sociais">
-                <ul>
-                    <li><a href="https://www.instagram.com/"></a><img src="imagens/icones/instagram.png"
-                            alt="ícone instagram"></li>
-                    <li><a href="imagens/icones/facebook.png">ícone facebook</a></li>
+button {
+    width: 150px;
+    height: 40px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
 
-                </ul>
-            </div>
+#btn-continuar {
+    background-color: var(--cor_suave);
+}
 
-            <div id="div-cartoes">
-                <img src="imagens/icones/hipercard.png" alt="Hipercard">
-                <img src="imagens/icones/visa.png" alt="Visa">
-                <img src="imagens/icones/master_card.png" alt="Mastercard">
-            </div>
-
-        </footer>
-    </main>
-</body>
-
-</html>
+#btn-finalizar {
+    background-color: var(--cor_principal);
+}

@@ -1,4 +1,6 @@
-#carrinho{
+@import url(style_estrutura_paginas.css);
+
+#carrinho {
     width: 1000px;
     min-height: 750px;
     display: flex;
@@ -6,55 +8,61 @@
     justify-content: space-between;
 }
 
-.item{
+#itens-carrinho {
+    width: 680px;
+    margin: 20px 10px;
+    min-height: 750px;
+}
+
+.item {
     width: 600px;
-    height: 150px;
-    margin: 220px 0px;
+    height: 100px;
+    margin: 20px 0px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     border-bottom: 2px solid var(--cor_suave);
 }
 
-.img-item{
+.img-item {
     width: 60px;
     height: 60px;
 }
 
-.input-item{
+.input-item {
     width: 60px;
     height: 30px;
     text-align: center;
     border-radius: 8px;
 }
 
-.img-remover{
-    width: 25px;
-    height: 25px;
+.img-remover {
+    width: 15px;
+    height: 15px;
     cursor: pointer;
 }
 
-
-#valores-carrinho{
+#valores-carrinho {
     width: 550px;
     min-height: 450px;
+    margin: 20px 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 15px;
 }
 
-#valores-carrinho h2{
+#valores-carrinho h2 {
     margin: 20px 0px;
+    text-align: center;
 }
 
 .valor{
-    width: 100%;
-    text-align: end;
+    text-align: center;
 }
 
-button{
-    width: 100%;
+button {
+    width: 150px;
     height: 40px;
     margin: 10px 0px;
     cursor: pointer;
@@ -62,10 +70,10 @@ button{
     border: none;
 }
 
-#btn-continuar{
-    background-color: var(--cor_principal);
+#btn-continuar {
+    background-color: var(--cor_suave);
 }
 
-#btn-finalizar{
+#btn-finalizar {
     background-color: var(--cor_principal);
 }
