@@ -11,30 +11,29 @@
 
 /*CRIANDO VARIÁVEIS*/
 :root{
-    --cor_principal: #65050f;
-    --cor_botao01: #fae9bc;
-    --cor_lnk_menu: #020100;
-    --cor_vermelha: #8d0000;
-    --cor_suave: #5a0000;
-    --cor_branca: #ffffff;
+    --cor_principal: #F1E2D1;
+    --cor_botao01: #541A1A;
+    --cor_lnk_menu: #810B38;
+    --cor_vermelha: #DCC3AA;
+    --cor_suave: #DCC3AA;
+    --cor_branca: #5a0000;
 }
 
 /*CONFIGURANDO A TAG main*/
 #geral{
-    margin: 20px;
-    padding: 20px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: var(--cor_principal);
 }
 
 /*CONFIGUANDOO O CABEÇALHO DA PÁGINA*/
 #cabecalho{
     width: 100%;
     height: 200px;
-    color: var(--cor_branca);
-    background-color: var(--cor_suave);
+    background-color: var(--cor_botao01);
     padding: 5px 100px;
     margin: 20px 0px;
     display: flex;
@@ -50,7 +49,7 @@
 }
 
 /*CONFIGURANDO A TAG nav POR MEIO DO SEU ID*/
-#menu{
+#menu ul{
     width: 750px;
     height: 160px;
     display: flex;
@@ -62,7 +61,6 @@
 #cabecalho ul, #menu-secoes {
     display: flex;
     list-style: none;
-    color: var(--cor_branca);
     gap: 30px
 } 
 
@@ -73,37 +71,35 @@
 }
 
 /*FORMATANDO OS MENUS*/
-#menu a:link{
+.link_menu {
     font-size: 2.3em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--cor_lnk_menu);
 }
 
-#menu a:visited{
-    font-size: 2.4em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--cor_lnk_menu);
-}
-
-#menu a:hover{
+.link_menu:visited{
     font-size: 2.4em;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--cor_principal);
 }
 
+#menu a:hover{
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--cor_lnk_menu);
+}
+
 #menu a:active{
     font-size: 2.4em;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--cor_vermelha);
+    color: var(--cor_suave);
 }
 
 /*FORMATANDO section PELO ID PESQUISA */
 #pesquisa{
-    background-color: var(--cor_principal);
     width: 100%;
     height: 180px;
     display: flex;
@@ -143,8 +139,10 @@
 .card{
     width: 250px;
     min-height: 250px;
-    border: solid 2px var(--cor_principal);
+    background-color: rgb(218, 218, 218);
+    border-radius: 5%;
     padding: 15px;
+    box-shadow: 0px 4px 8px rgb(110, 110, 110);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,15 +163,18 @@
     margin: 20px 0px;    
 }
 
-.card button{
+.btn_card{
     width: 100%;
-    height: 45px;
+    height: 50px;
+    border-radius: 8%;
     text-transform: uppercase;
     letter-spacing: 5px;
     border: none;
-    background-color: var(--cor_suave);
     cursor: pointer;
-    color: var(--cor_branca);
+    color: var(--cor_principal);
+    background-color: var(--cor_botao01);
+    
+    
 }
 
 .card img{
@@ -185,8 +186,8 @@
 #rodape{
     width: 100%;
     height: 300px;
-    color: var(--cor_branca);
-    background-color: var(--cor_suave);
+    color: var(--cor_principal);
+    background-color: var(--cor_botao01);
     display: flex;
     align-items: center;
     justify-content:space-around;
@@ -228,14 +229,11 @@
     text-decoration: none;
     font-size: 1.3em;
     letter-spacing: 3px;
-    color: var(--cor_vermelha);
+    color: var(--cor_botao01);
 }
 
 .lnk-secao:hover {
     font-size: 1.5em;
-    color: var(--cor_botao01);
+    color: var(--cor_branca);
 }
 
-.lnk-secao:active {
-    color: var(--cor_principal);
-}
