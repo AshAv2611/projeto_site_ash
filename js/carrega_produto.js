@@ -143,9 +143,11 @@ const montandoCards = (objProdutos) => {
         btnCard.addEventListener('click', ()=>{
             //ADICIONANDO UM OBJETO  NO CARRINHO
             addItem(elem)
+
+            console.log(localStorage.getItem("itensSessao"));
             
             //REDIRECIONA PARA A PÁGINAS carrinho.html
-            window.location.href = "/paginas/carrinho.html"
+            window.location.href = "paginas/carrinho.html"
         })
 
         divCard.appendChild(imgProduto)

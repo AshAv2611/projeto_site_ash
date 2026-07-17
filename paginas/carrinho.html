@@ -12,6 +12,9 @@
 
     <!--LINK PARA O ARQUIVO -->
     <link rel="stylesheet" href="../css/style_carrinho.css">
+
+    <script src="../js/carrinho.js" type="module" defer></script>
+    <script src="../js/monta_tela_carrinho.js" type="module" defer></script>
 </head>
 
 <body>
@@ -45,19 +48,10 @@
             <input type="text" name="pesquisa" id="pesquisa" placeholder="Digite seu produto">
         </section>
 
-        <section id="carrinho">
+        <section id="carrinho">\
+
             <section id="itens-carrinho">
-                <section class="item">
-                    <img src="/imagens/blueOne.jpg" alt="blueOne" class="img-item">
-                    <p class="descricao"> Cesto 01</p>
-                    <p class="vlr-unitario">R$ 45.00 Kg</p>
-                    <input type="number" name="quant01" id="quant01" class="input-item" value="1">
-                    <p class="tot-item">R$ 45,00</p>
-                    <img src="/imagens/icones/" alt="" class="img-remover">
-                </section>
 
-
-                
             </section>
 
             <div id="valores-carrinho">
@@ -71,7 +65,7 @@
                     <p id="valor-total" class="valor">R$ 100,00</p>
 
                     <h2 class="titulo-valores-carrinho">Valor Frete</h2>
-                    <p id="valor-total" class="valor">R$ 10,00</p>
+                    <p id="valor-frete" class="valor">R$ 10,00</p>
                 </div>
 
                 <div id="div-calc-valor-pagar">
@@ -82,6 +76,7 @@
                 <button id="btn-continuar" class="btn-carrinho">Continuar Compra</button>
                 <button id="btn-finalizar" class="btn-carrinho">Finalizar Compra</button>
             </div>
+
         </section>
 
         <footer id="rodape">

@@ -1,5 +1,3 @@
-//localStorage.removeItem("itensSessao");
-//localStorage.clear()
 
 //CRIANDO O ARRAY DE ITENS DO CARRINHO
 const itensCarrinho = JSON.parse(localStorage.getItem('itensSessao')) || []
@@ -18,9 +16,6 @@ const fObjItem = (objProduto) => {
     return item
 
 }
-
-//PEGANDO O INDICE DO ARRAY 
-console.log("índice do array ->>> ",itensCarrinho.findIndex(elem => elem.id_produto == 12))
 
 //FUNÇÃO PARA ADCIONAR O ITEM NO ARRAY
 const addItem = (objItem) => {
@@ -57,17 +52,19 @@ const listItens = () => {
 //REMOVER ELEMENTO
 const removeItem = (idProduto) => {
 
-    const indice = itensCarrinho.findIndex(
+    const itens = listItens();
+
+    const indice = itens.findIndex(
         item => item.id_produto == idProduto
     );
 
     if (indice != -1) {
 
-        itensCarrinho.splice(indice, 1);
+        itens.splice(indice, 1);
 
         localStorage.setItem(
             "itensSessao",
-            JSON.stringify(itensCarrinho)
+            JSON.stringify(itens)
         );
 
     }
@@ -83,7 +80,9 @@ const alterarQuantidade = (idProduto, quantidade) => {
         return false;
     }
 
-    const produto = itensCarrinho.find(
+    const itens = listItens();
+
+    const produto = itens.find(
         item => item.id_produto == idProduto
     );
 
@@ -93,7 +92,7 @@ const alterarQuantidade = (idProduto, quantidade) => {
 
         localStorage.setItem(
             "itensSessao",
-            JSON.stringify(itensCarrinho)
+            JSON.stringify(itens)
         );
 
     }
@@ -110,9 +109,11 @@ const calcularTotalItem = (produto) => {
 
 const calcularTotalCarrinho = () => {
 
+    const itens = listItens();
+
     let total = 0;
 
-    itensCarrinho.forEach(produto => {
+    itens.forEach(produto => {
 
         total += produto.valor_unitario * produto.quantidade;
 

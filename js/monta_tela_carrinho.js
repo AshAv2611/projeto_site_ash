@@ -57,9 +57,9 @@ const montaTelaCarrinho = () => {
 
         const inputQuantidade = sectionItem.querySelector(`#quant${i}`);
         inputQuantidade.addEventListener('input', (evt) => {
-            let valorDigitado = parseInt(evt.target.value);
+            let valorDigitado = Number(evt.target.value);
 
-            if (isNaN(valorDigitado) || valorDigitado < 1) {
+            if (!Number.isInteger(valorDigitado) || valorDigitado < 1) {
                 valorDigitado = 1;
                 evt.target.value = 1;
             }
@@ -81,3 +81,5 @@ const montaTelaCarrinho = () => {
 document.addEventListener("DOMContentLoaded", () => {
     montaTelaCarrinho();
 });
+
+montaTelaCarrinho()
