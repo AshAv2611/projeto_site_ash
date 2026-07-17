@@ -1,4 +1,4 @@
-import { addItem, listItens, removeItem, alterarQuantidade, calcularTotalCarrinho, calcularTotalItem } from "./carrinho.js";
+import { listItens, removeItem, alterarQuantidade, calcularTotalCarrinho } from "./carrinho.js";
 
 const atualizaValoresFinais = () => {
     const subtotal = calcularTotalCarrinho();
@@ -81,5 +81,3 @@ const montaTelaCarrinho = () => {
 document.addEventListener("DOMContentLoaded", () => {
     montaTelaCarrinho();
 });
-
-montaTelaCarrinho()

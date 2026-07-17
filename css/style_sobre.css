@@ -1,0 +1,11 @@
+.texto{
+    width: 60%;
+    height: 600pxpx;
+    margin: 50px 0px;
+    padding: 20px;
+    border-radius: 5%;
+    color: white;
+    background-color: var(--cor_botao01);
+    display: flex;
+    
+}

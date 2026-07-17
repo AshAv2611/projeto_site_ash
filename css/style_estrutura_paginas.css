@@ -27,6 +27,7 @@
     justify-content: center;
     align-items: center;
     background-color: var(--cor_principal);
+    min-height: 60px 0px;
 }
 
 /*CONFIGUANDOO O CABEÇALHO DA PÁGINA*/

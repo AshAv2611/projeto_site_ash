@@ -70,14 +70,6 @@ const produtos = [
     valor_unitario: 45.00,
     id_secao: 3,
     nome_secao: "Rosa"
-  },
-  {
-    id_produto: 10,
-    descricao_produto: "Lace Loira Platinada",
-    caminho_da_imagem: "imagens/blondeOne.jpg", // Exemplo de produto para a seção Loira
-    valor_unitario: 45.00,
-    id_secao: 4,
-    nome_secao: "Loira"
   }
 ];
 
