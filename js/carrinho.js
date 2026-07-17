@@ -24,9 +24,26 @@ console.log("índice do array ->>> ",itensCarrinho.findIndex(elem => elem.id_pro
 
 //FUNÇÃO PARA ADCIONAR O ITEM NO ARRAY
 const addItem = (objItem) => {
-    itensCarrinho.push(fObjItem(objItem))
 
-    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
+    const indice = itensCarrinho.findIndex(
+        item => item.id_produto == objItem.id_produto
+    );
+
+    if (indice != -1) {
+
+        itensCarrinho[indice].quantidade++;
+
+    } else {
+
+        itensCarrinho.push(fObjItem(objItem));
+
+    }
+
+    localStorage.setItem(
+        "itensSessao",
+        JSON.stringify(itensCarrinho)
+    );
+
 }
 
 //LISTAR ITENS DO CARRINHO
@@ -38,12 +55,72 @@ const listItens = () => {
 }
 
 //REMOVER ELEMENTO
-const removeItem = (pos) => {
-    itensCarrinho.splice(pos, 1)
+const removeItem = (idProduto) => {
 
-    localStorage.setItem('itensSessao', JSON.stringify(itensCarrinho))
+    const indice = itensCarrinho.findIndex(
+        item => item.id_produto == idProduto
+    );
+
+    if (indice != -1) {
+
+        itensCarrinho.splice(indice, 1);
+
+        localStorage.setItem(
+            "itensSessao",
+            JSON.stringify(itensCarrinho)
+        );
+
+    }
+
+}
+
+//SOMA AO PRODUTO APENAS A QUANTIDADE
+const alterarQuantidade = (idProduto, quantidade) => {
+
+    quantidade = parseInt(quantidade);
+
+    if (isNaN(quantidade) || quantidade <= 0) {
+        return false;
+    }
+
+    const produto = itensCarrinho.find(
+        item => item.id_produto == idProduto
+    );
+
+    if (produto) {
+
+        produto.quantidade = quantidade;
+
+        localStorage.setItem(
+            "itensSessao",
+            JSON.stringify(itensCarrinho)
+        );
+
+    }
+
+    return true;
+
+}
+
+const calcularTotalItem = (produto) => {
+
+    return produto.valor_unitario * produto.quantidade;
+
+}
+
+const calcularTotalCarrinho = () => {
+
+    let total = 0;
+
+    itensCarrinho.forEach(produto => {
+
+        total += produto.valor_unitario * produto.quantidade;
+
+    });
+
+    return total;
 
 }
 
 
-export { addItem, listItens, removeItem }
+export {addItem, listItens, removeItem, alterarQuantidade, calcularTotalCarrinho, calcularTotalItem}
